@@ -8,6 +8,6 @@ KDD 2019 <br>
 
 ![](https://github.com/ninghaohello/Polysemous-Network-Embedding/blob/master/PolyDeepwalk.png)
 
-Current implementation consists of two models:
-PolyDeepwalk: Extends the Deepwalk model to handle different node aspects in homogeneous networks.
-PolyPTE: Extends the PTE model to handle different node aspects in hetergeneous networks (bipartite networks in this work).
+Current implementation contains of two models:<br>
+PolyDeepwalk: Extends the Deepwalk model to handle different node aspects in homogeneous networks.<br>
+PolyPTE: Extends the PTE model to handle different node aspects in hetergeneous networks (bipartite networks in this work).<br>

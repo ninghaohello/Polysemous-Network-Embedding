@@ -152,7 +152,7 @@ if __name__ == "__main__":
     else:
         W = np.load(os.path.join(os.path.dirname(os.getcwd()), 'data', name_data, 'W_' + str(args_training.K) + '.npy'))
         H = np.load(os.path.join(os.path.dirname(os.getcwd()), 'data', name_data, 'H_' + str(args_training.K) + '.npy'))
-    prob_W, prob_H = normalizeWH(W, H)      # be careful the mearning of this function, not probability, but likelihood
+    prob_W, prob_H = normalizeWH(W, H)      # likelihood
     prob_W = prob_cluster(prob_W)
     prob_H = prob_cluster(prob_H.T).T
 
@@ -166,8 +166,8 @@ if __name__ == "__main__":
             item = item - num_users     # de-concatenate index
             p_joint = (prob_W[user] + prob_H[:,item])/2
             for kk in range(args_training.num_samples_clustering):
-                k1 = np.random.choice(args_training.K, 1, p=p_joint)[0]  # which cluster prior
-                k2 = np.random.choice(args_training.K, 1, p=p_joint)[0]  # which cluster prior
+                k1 = np.random.choice(args_training.K, 1, p=p_joint)[0]
+                k2 = np.random.choice(args_training.K, 1, p=p_joint)[0]
                 dataset.append((k1+user*args_training.K, [k2+item*args_training.K]))
         print("Sampling done")
 

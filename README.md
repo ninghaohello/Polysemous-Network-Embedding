@@ -16,9 +16,9 @@ Current implementation contains of two models:<br>
 ### Files in the folder
 - `data/`
   - `BlogCatelog/`
-    - `training.mat`: training data samples in the form of (row, col, val);
-    - `testing.pkl`: testing data;
-    - `snmf6.mat`: pre-obtained symmetric NMF clustering result on training data graph, following the model in https://github.com/dakuang/symnmf;
+    - `training.mat`: training data samples in the form of (row, col, 1);
+    - `testing.pkl`: testing data in python dict format, where dict[row]=[col1, col2, ...];
+    - `snmf6.mat`: pre-obtained symmetric NMF clustering result on training data graph (this example has 6 clusters), following the model in https://github.com/dakuang/symnmf;
   - `movielens/`
     - `training.mat`: training data samples in the form of (row, col, val);
     - `testing.mat`: testing data samples;
